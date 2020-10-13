@@ -1,3 +1,5 @@
 *venv
 data/
 questions.txt
+*.~lock*
+*.ipynb_checkpoints/
