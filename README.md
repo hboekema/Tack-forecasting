@@ -22,6 +22,16 @@ The Python packages needed are listed in requirements.txt
   pip install -r requirements.txt  
   ```
 
+### Data setup
+
+  ```bash
+  mkdir data/
+  mkdir data/train/  
+  mkdir data/test/  
+  mv PATH/TO/test_data.csv data/  
+  cd src  
+  python split_train_test.py  
+  ```
 
 ## Model explanation
 
