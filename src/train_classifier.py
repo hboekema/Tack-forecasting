@@ -15,14 +15,17 @@ from xgboost import plot_tree
 
 if __name__ == "__main__":
     dataframe = DataLoader(datapath="../data/train/train_data.csv").load_dataframe_from_datapath()
-    
+    print(dataframe.dtypes)
+    dataframe = dataframe.convert_dtypes(convert_integer=False)
+    print(dataframe.dtypes)
+
     train_dmatrix, val_dmatrix = dataframe_to_dmatrix_for_classifier_training(dataframe)
 
     classifier_model_params = {
             'colsample_bynode': 0.8,
             'learning_rate': 1,
             'max_depth': 6,
-            'num_parallel_tree': 10,
+            'num_parallel_tree': 20,
             'objective': 'binary:logistic',
             'eval_metric': 'error',
             'subsample': 0.8,

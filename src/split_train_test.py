@@ -30,8 +30,8 @@ def split_train_test(csv_datapath=None):
 
     print(test_dataframe)
 
-    test_dataframe.to_csv("../data/test/test_data.csv")
-    train_dataframe.to_csv("../data/train/train_data.csv")
+    test_dataframe.to_csv("../data/test/test_data.csv", index=False)
+    train_dataframe.to_csv("../data/train/train_data.csv", index=False)
 
 
 if __name__ == "__main__":

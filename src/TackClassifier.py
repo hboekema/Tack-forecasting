@@ -21,6 +21,10 @@ class TackClassifier:
         assert self.booster is not None
         return self.booster.predict(data)
 
+    def eval(self, data):
+        assert self.booster is not None
+        return self.booster.eval(data)
+
     def save_model(self, path):
         self.booster.save_model(path)
     

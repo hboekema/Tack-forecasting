@@ -14,6 +14,13 @@ def preprocess_dataframe_for_classification(dataframe):
     return feature_dataframe
 
 
+def dataframe_to_dmatrix_for_classification(dataframe):
+    preprocessed_dataframe = preprocess_dataframe_for_classification(dataframe)
+    data_dmatrix = xgb.DMatrix(data=preprocessed_dataframe)
+
+    return data_dmatrix
+
+
 def preprocess_dataframe_for_classifier_training(dataframe):
     dataframe_labelled = dataframe.dropna(axis=0)
     X_dataframe = preprocess_dataframe_for_classification(dataframe_labelled)
