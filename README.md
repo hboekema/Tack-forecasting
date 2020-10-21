@@ -13,14 +13,14 @@ The Python packages needed are listed in requirements.txt
 ## Setup
 
 ### Unix setup with virtualenv
-  '''shell
-  virtualenv venv
-  source venv/bin/activate
-  pip install -U pip
-  deactivate
-  source venv/bin/activate
-  pip install -r requirements.txt
-  '''
+  ```bash  
+  virtualenv venv  
+  source venv/bin/activate  
+  pip install -U pip  
+  deactivate  
+  source venv/bin/activate  
+  pip install -r requirements.txt  
+  ```
 
 
 ## Model explanation
@@ -40,13 +40,15 @@ These assumptions were verified empirically before selecting and constructing a 
 
 The model is composed of forecasting and classification components. The complete model can be evaluated using the eval_model.py script in the src directory. This script takes an optional argument with the path to a CSV file containing a single (labelled) sailing sequence to be used for evaluating the model accuracy. If no path is passed, a random sequence from the test dataset is chosen for evaluation. Usage:
 
+```bash
 python eval_model.py --datapath PATH/TO/DATA.csv
-
+```
 
 The classification model can similarly be evaluated (only on the test set, not custom data) by running:
 
+```bash
 python eval_classifier.py
-
+```
 
 ## API usage
 
