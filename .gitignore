@@ -3,3 +3,4 @@ data/
 questions.txt
 *.~lock*
 *.ipynb_checkpoints/
+*.png
