@@ -13,7 +13,7 @@ The Python packages needed are listed in requirements.txt
 ## Setup
 
 ### Unix setup with virtualenv
-  '''bash
+  '''shell
   virtualenv venv
   source venv/bin/activate
   pip install -U pip
